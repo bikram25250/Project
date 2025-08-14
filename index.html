@@ -1,48 +1,16 @@
-<HTML>
-<HEAD>
-<TITLE> HTML file </TITLE>
-<LINK rel="stylesheet" href="style.css">
-</HEAD>
-<BODY>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+   
+   <video src="D:\Video\VID_20250422_131626.mp4" height="255" wwidth="" poster="C:\Users\user\OneDrive\Pictures\IMG_20250429_230909~3.jpg" controls></video>
 
+   <audio src="CWmission.mp3" controls> </audio>
 
-<DIV class="container">
-<div class="side">
- <h1 align="center"> Check vowel & consonant </h1> <br> 
- <div class="input"> <h3> Enter any character </h3>
- &nbsp; &nbsp; <input type="text" id="data" placeholder="Enter here..."> </div> <br>
- <center> <button onclick="vowel()"> Check </button> </center> <br>
- <div class="opt"> <h3 id="output" class="output"> </h3> </div>
-</div> 
-</DIV> <!-- End container div -->
-
-
-    
-<script>
-	function vowel(){
-	var x = document.getElementById('data').value;
-	document.getElementById('output').innerHTML = x;
-	switch(x){
-	case 'a':
-	case 'e':
-	case 'i':
-	case 'o':
-	case 'u':
-	case 'A':
-	case 'E':
-	case 'I':
-	case 'O':
-	case 'U':
-	   var y=x;
-	   document.getElementById('output').innerHTML = "It is VOWEL";
-	   break;
-	   default:
-	   document.getElementById('output').innerHTML = "It is CONSONANT";
-	   
-	}
-	}
-</script>
-
-</BODY>
-</HTML>
-
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/fhoDRB53DwY?si=Dx9Vz3vi7D5aa-iC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>
