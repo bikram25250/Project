@@ -1,16 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cash Counting Program — Converted from C</title>
+  <link rel="stylesheet" href="style.css">
+  </head>
 <body>
-   
-   <video src="D:\Video\VID_20250422_131626.mp4" height="255" wwidth="" poster="C:\Users\user\OneDrive\Pictures\IMG_20250429_230909~3.jpg" controls></video>
+  <div class="card" role="main">
+    <header>
+      <div>
+        <h1>--------- CASH COUNTING PROGRAM ---------</h1>
+        <div style="color:var(--muted);font-size:13px">Designed by - BIKRAM HALDAR</div>
+        <div style="color:var(--muted);font-size:13px">Currency - INDIAN</div>
+      </div>
+      <div class="meta">
+        <div id="date">Date - </div>
+        <div style="margin-top:6px;">&#8377; — Indian Rupees</div>
+      </div>
+    </header>
 
-   <audio src="CWmission.mp3" controls> </audio>
+    <form id="cashForm" onsubmit="return false;" autocomplete="off">
+      <div class="grid">
+        <div>
+          <label>RS/- 500  &nbsp; × </label>
+          <div class="denom">
+            <div class="left">Denomination: <strong>500</strong></div>
+            <input id="count500" type="number" min="0" step="1" value="0" />
+          </div>
+        </div>
 
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/fhoDRB53DwY?si=Dx9Vz3vi7D5aa-iC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div>
+          <label>RS/- 200  &nbsp; × </label>
+          <div class="denom">
+            <div class="left">Denomination: <strong>200</strong></div>
+            <input id="count200" type="number" min="0" step="1" value="0" />
+          </div>
+        </div>
+
+        <div>
+          <label>RS/- 100  &nbsp; × </label>
+          <div class="denom">
+            <div class="left">Denomination: <strong>100</strong></div>
+            <input id="count100" type="number" min="0" step="1" value="0" />
+          </div>
+        </div>
+
+        <div>
+          <label>RS/- 50  &nbsp; × </label>
+          <div class="denom">
+            <div class="left">Denomination: <strong>50</strong></div>
+            <input id="count50" type="number" min="0" step="1" value="0" />
+          </div>
+        </div>
+
+        <div>
+          <label>RS/- 20  &nbsp; × </label>
+          <div class="denom">
+            <div class="left">Denomination: <strong>20</strong></div>
+            <input id="count20" type="number" min="0" step="1" value="0" />
+          </div>
+        </div>
+
+        <div>
+          <label>RS/- 10  &nbsp; × </label>
+          <div class="denom">
+            <div class="left">Denomination: <strong>10</strong></div>
+            <input id="count10" type="number" min="0" step="1" value="0" />
+          </div>
+        </div>
+      </div>
+
+      <div class="totals">
+        <div class="row"><span>500 x <span id="show500Count">0</span></span><strong id="total500">0 /-</strong></div>
+        <div class="row"><span>200 x <span id="show200Count">0</span></span><strong id="total200">0 /-</strong></div>
+        <div class="row"><span>100 x <span id="show100Count">0</span></span><strong id="total100">0 /-</strong></div>
+        <div class="row"><span>50 x <span id="show50Count">0</span></span><strong id="total50">0 /-</strong></div>
+        <div class="row"><span>20 x <span id="show20Count">0</span></span><strong id="total20">0 /-</strong></div>
+        <div class="row"><span>10 x <span id="show10Count">0</span></span><strong id="total10">0 /-</strong></div>
+        <div class="row" style="margin-top:6px;background:linear-gradient(90deg, rgba(6,182,212,0.12), rgba(6,182,212,0.06));">
+          <span style="color:var(--muted)">Total Amount</span>
+          <div class="totalAmount" id="grandTotal">0 /-</div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="calcBtn">Calculate</button>
+        <button class="secondary" id="clearBtn" type="button">Reset</button>
+      </div>
+    </form>
+
+    <footer>
+      <div>-------------------------------------------</div>
+      <div style="margin-top:6px">Thank you...</div>
+    </footer>
+  </div>
+
+    <script src="text.js"></script>
 </body>
-</html>
