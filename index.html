@@ -1,104 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cash Counting Program — Converted from C</title>
-  <link rel="stylesheet" href="style.css">
-  </head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cash Counter</title>
+<link rel="stylesheet" href="style.css">
+</head>
 <body>
-  <div class="card" role="main">
-    <header>
-      <div>
-        <h1>--------- CASH COUNTING PROGRAM ---------</h1>
-        <div style="color:var(--muted);font-size:13px">Designed by - BIKRAM HALDAR</div>
-        <div style="color:var(--muted);font-size:13px">Currency - INDIAN</div>
-      </div>
-      <div class="meta">
-        <div id="date">Date - </div>
-        <div style="margin-top:6px;">&#8377; — Indian Rupees</div>
-      </div>
-    </header>
+<div class="box">
+<h2>Money Counting Calculator</h2> 
 
-    <form id="cashForm" onsubmit="return false;" autocomplete="off">
-      <div class="grid">
-        <div>
-          <label>RS. 500  &nbsp; × </label>
-          <div class="denom">
-            <div class="left"> <strong>500 /-</strong></div>
-            <input id="count500" type="number" min="0" step="1" value="0" />
-          </div>
-        </div>
+<div class="money">
 
-        <div>
-          <label>RS. 200  &nbsp; × </label>
-          <div class="denom">
-            <div class="left"> <strong>200 /-</strong></div>
-            <input id="count200" type="number" min="0" step="1" value="0" />
-          </div>
-        </div>
+<div class="row">
+  <img src ="C:\Users\user\OneDrive\Pictures\500.jpg" alt="₹500 Note"> <h2>×</h2>
+  <input type="number" id="n500" value="0" min="0">
+</div>
 
-        <div>
-          <label>RS. 100  &nbsp; × </label>
-          <div class="denom">
-            <div class="left"> <strong>100 /-</strong></div>
-            <input id="count100" type="number" min="0" step="1" value="0" />
-          </div>
-        </div>
+<div class="row">
+  <img src ="C:\Users\user\OneDrive\Pictures\200.jpg" alt="₹200 Note"> <h2>×</h2>
+  <input type="number" id="n200" value="0" min="0">
+</div>
 
-        <div>
-          <label>RS. 50  &nbsp; × </label>
-          <div class="denom">
-            <div class="left"> <strong>50 /-</strong></div>
-            <input id="count50" type="number" min="0" step="1" value="0" />
-          </div>
-        </div>
+<div class="row">
+  <img src ="C:\Users\user\OneDrive\Pictures\100.jpg" alt="₹100 Note"> <h2>×</h2>
+  <input type="number" id="n100" value="0" min="0">
+</div>
 
-        <div>
-          <label>RS. 20  &nbsp; × </label>
-          <div class="denom">
-            <div class="left"> <strong>20 /-</strong></div>
-            <input id="count20" type="number" min="0" step="1" value="0" />
-          </div>
-        </div>
+<div class="row">
+  <img src = "C:\Users\user\OneDrive\Pictures\50.jpg" alt="₹50 Note"> <h2>×</h2>
+  <input type="number" id="n50" value="0" min="0">
+</div>
 
-        <div>
-          <label>RS. 10  &nbsp; × </label>
-          <div class="denom">
-            <div class="left"> <strong>10 /-</strong></div>
-            <input id="count10" type="number" min="0" step="1" value="0" />
-          </div>
-        </div>
-      </div>
+<div class="row">
+  <img src ="C:\Users\user\OneDrive\Pictures\20.jpg" alt="₹20 Note"> <h2>×</h2>
+  <input type="number" id="n20" value="0" min="0">
+</div>
 
-      <div class="totals">
-        <div class="row"><span>500 x <span id="show500Count">0</span></span><strong id="total500">0 /-</strong></div>
-        <div class="row"><span>200 x <span id="show200Count">0</span></span><strong id="total200">0 /-</strong></div>
-        <div class="row"><span>100 x <span id="show100Count">0</span></span><strong id="total100">0 /-</strong></div>
-        <div class="row"><span>50 x <span id="show50Count">0</span></span><strong id="total50">0 /-</strong></div>
-        <div class="row"><span>20 x <span id="show20Count">0</span></span><strong id="total20">0 /-</strong></div>
-        <div class="row"><span>10 x <span id="show10Count">0</span></span><strong id="total10">0 /-</strong></div>
-        <div class="row" style="margin-top:6px;background:linear-gradient(90deg, rgba(6,182,212,0.12), rgba(6,182,212,0.06));">
-          <span style="color:var(--muted)">Total Amount</span>
-          <div class="totalAmount" id="grandTotal">0 /-</div>
-        </div>
-      </div>
+<div class="row">
+  <img src ="C:\Users\user\OneDrive\Pictures\10.jpg" alt="₹10 Note"> <h2>×</h2>
+  <input type="number" id="n10" value="0" min="0">
+</div>
 
-      <div class="actions">
-        <button id="calcBtn">Calculate</button>
-        <button class="secondary" id="clearBtn" type="button">Reset</button>
-      </div>
-    </form>
+<button onclick="calculate()">Calculate Total</button>
+<div class="result" id="result">Total Amount = 0 /-</div>
+</div>
 
-    <footer>
-      <div>-------------------------------------------</div>
-      <div style="margin-top:6px">Thank you...</div>
-    </footer>
-  </div>
+</div> <!-- End money div-->
 
-    <script src="text.js"></script>
+<script src="text.js"></script>
 </body>
-
-
+</html>
 
 
